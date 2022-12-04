@@ -1,0 +1,4 @@
+date,store_nbr,family,onpromotion,city,state,store_type,cluster,day_type,locale,locale_name
+2022-12-04,1,AUTOMOTIVE,0.0,Puyo,Pichincha,A,13,Workday,National,Ecuador
+2022-12-01,7,AUTOMOTIVE,6.0,Cayambe,Pichincha,A,7,Day Type,Local,Manta
+2022-12-04,5,BOOKS,2.0,Esmeraldas,Pichincha,E,13,Special Day:Transfered/Additional Holiday,Local,Puyo
