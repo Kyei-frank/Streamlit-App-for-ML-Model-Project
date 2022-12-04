@@ -208,20 +208,3 @@ if submitted:
         df = pd.read_csv(tmp_df_file)
         df['Sales']= prediction
         st.dataframe(df)
-
-
-# def processing_FE(dataset, scaler=None, imputer= None, encoder=None, FE=None): #
-#     "Cleaning, processing and feature engineering of our input data"
-
-#     if imputer is not None:
-#         output_dataset = imputer.transform(dataset)
-        
-#     if scaler is not None:
-#         output_dataset = scaler.transform(output_dataset)
-    
-#     if encoder is not None:
-#         output_dataset = encoder.transform(output_dataset)
-#     if FE is not None:
-#         output_dataset = FE.transform(output_dataset)
-        
-#     return output_dataset
