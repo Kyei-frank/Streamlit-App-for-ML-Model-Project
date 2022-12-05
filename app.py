@@ -117,11 +117,11 @@ setup(tmp_df_file)
 st.markdown("<h2 style='text-align: center;'> Sales Prediction </h2> ", unsafe_allow_html=True)
 st.markdown("<h7 style='text-align: center;'> Fill in the details below and click on SUBMIT button to make a prediction for a specific date and item </h7> ", unsafe_allow_html=True)
 
+# Creating columns for for input data(forms)
+left_col, mid_col, right_col = st.columns(3)
+
 # Developing forms to collect input data
 with st.form(key="information", clear_on_submit=True):
-
-    # Dividing forms into 3 columns
-    left_col, mid_col, right_col = st.columns(3)
     
     # Setting up input data for 1st column
     left_col.markdown("**PRODUCT DATA**")
@@ -139,10 +139,10 @@ with st.form(key="information", clear_on_submit=True):
 
     # Setting up input data for 3rd column
     right_col.markdown("**ADDITIONAL DATA**")
-    check= right_col.checkbox("Is it a Holiday? (Check box if is a holiday or weekend)")
+    check= right_col.checkbox("Is it a Holiday or weekend?")
     if check:
-        st.write('Fill the following information on Holiday')
-        day_type = right_col.selectbox("Holiday:", options= ('Day Type','Special Day:Transfered/Additional Holiday','No Work/Weekend'))
+        right_col.write('Fill the following information on Day Type')
+        day_type = right_col.selectbox("Holiday:", options= ('Holiday','Special Day:Transfered/Additional Holiday','No Work/Weekend'))
         locale= right_col.selectbox("Holiday Locale:", options= list(holidays_event["locale"].unique()))
         locale_name= right_col.selectbox("Locale Name:", options= list(holidays_event["locale_name"].unique()))
     else:
