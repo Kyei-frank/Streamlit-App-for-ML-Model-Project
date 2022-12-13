@@ -16,9 +16,10 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
 **NB:** For MacOs users, please install `Xcode` if you have an issue.
 
 
+### Running App
 
-- Run the demo apps (being at the repository root):
-        streamlit run final_app.py
+ - Run the demo apps (being at the repository root):
+        streamlit run app.py
 
  - Go to your browser at the following address :
         
