@@ -28,7 +28,9 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
 
 <table>
     <tr>
-        <th>Sales Prediction App</th>
+        <th>Input Interface</th>
+        <th>Side Bar</th>
+        <th>After Prediction</th>
     </tr>
     <tr>
         <td><img src="./screenshots/1.png"/></td>
