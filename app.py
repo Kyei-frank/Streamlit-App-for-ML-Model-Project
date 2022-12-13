@@ -66,6 +66,8 @@ def load_saved_objects(file_path = 'ML_items'):
         loaded_object = pickle.load(file)
         
     return loaded_object
+
+# Instantiating ML_items
 Loaded_object = load_saved_objects(file_path = 'ML_items')
 model, encoder, train_data, stores, holidays_event = Loaded_object['model'], Loaded_object['encoder'], Loaded_object['train_data'], Loaded_object['stores'], Loaded_object['holidays_event']
 
