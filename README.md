@@ -23,7 +23,7 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
 
  - Go to your browser at the following address :
         
-      http://172.20.10.4:8501
+      http://172.20.10.4:8502
         
 ## Screenshots
 
