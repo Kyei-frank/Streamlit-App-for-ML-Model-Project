@@ -190,11 +190,11 @@ if submitted:
         processed_data[col] = encoder.fit_transform(processed_data[col])
     
     # Making Predictions
-    def predict(X, model= Loaded_object['model']):
+    def predict(X, model):
         results = model.predict(X)
         return results
     
-    prediction = predict(processed_data, model= Loaded_object['model'])
+    prediction = predict(X= processed_data, model= Loaded_object['model'])
     df['Sales']= prediction 
     
     

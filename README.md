@@ -16,14 +16,13 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
 **NB:** For MacOs users, please install `Xcode` if you have an issue.
 
 
-### Running App
 
- - Run the demo apps (being at the repository root):
+- Run the demo apps (being at the repository root):
         streamlit run app.py
 
  - Go to your browser at the following address :
         
-      http://172.20.10.4:8502
+      https://huggingface.co/spaces/FKBaffour/Streamlit_App_for_Sales_Forecasting
         
 ## Screenshots
 
@@ -39,3 +38,6 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
         <td><img src="./screenshots/3.png"/></td>
     </tr>
 </table>
+
+## Author:
+FK Baffour
