@@ -29,7 +29,7 @@ def add_bg_from_local(image_file):
 add_bg_from_local('images/background.jpg')
 
 # Setting up logo
-left1, left2, mid,right1, right2 = st.columns(5)
+left1, mid, right1 = st.columns(3)
 with mid:
     st.image("images/logo.jpg", use_column_width=True)
 
@@ -69,7 +69,7 @@ def load_saved_objects(file_path = 'ML_items'):
 
 # Instantiating ML_items
 Loaded_object = load_saved_objects(file_path = 'ML_items')
-model, encoder, train_data, stores, holidays_event = Loaded_object['model'], Loaded_object['encoder'], Loaded_object['train_data'], Loaded_object['stores'], Loaded_object['holidays_event']
+pipeline, train_data, stores, holidays_event = Loaded_object['pipeline'], Loaded_object['train_data'], Loaded_object['stores'], Loaded_object['holidays_event']
 
 # Setting Function for extracting Calendar features
 @st.cache()
@@ -183,20 +183,9 @@ if submitted:
     processed_data= getDateFeatures(df, 'date')
     processed_data= processed_data.drop(columns=['date'])
     
-    # Encoding Categorical Variables
-    encoder = preprocessing.LabelEncoder()
-    cols = ['family', 'city', 'state', 'store_type', 'locale', 'locale_name', 'day_type']
-    for col in cols:
-        processed_data[col] = encoder.fit_transform(processed_data[col])
-    
-    # Making Predictions
-    def predict(X, model):
-        results = model.predict(X)
-        return results
-    
-    prediction = predict(X= processed_data, model= Loaded_object['model'])
+    # Making predictions
+    prediction = pipeline.predict(processed_data)
     df['Sales']= prediction 
-    
     
     # Displaying prediction results
     st.markdown('''---''')
